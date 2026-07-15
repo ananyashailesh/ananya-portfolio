@@ -5,22 +5,39 @@
 
 [![Site preview](/public/site-preview.png)](https://ananyashailesh.dev)
 
-My personal portfolio, showcasing projects like [PolarisGCS](https://github.com/PolarisGCS), a multi-drone ground control system, Guardian Bot, a ROS-based assistive robot, and [PawGuard](https://github.com/ChauhanKrish4763/Pawguard), an animal rescue mobile app. Built with [Remix](https://remix.run/), [Three.js](https://threejs.org/), and [Framer Motion](https://www.framer.com/motion/). View the [live site](https://ananyashailesh.dev).
+My personal portfolio site. I'm a Computer Science student specializing in
+AI and Robotics at VIT Chennai, currently interning on the Excalibur team at
+Dell Technologies, where I build AI-driven tools, robotics systems, and
+full-stack applications.
 
-Based on the open-source [portfolio template](https://github.com/HamishMW/portfolio) by Hamish Williams.
+**Live site:** [ananyashailesh.dev](https://ananyashailesh.dev)
 
-## Install & run
+## Featured projects
 
-Make sure you have nodejs `19.9.0` or higher and npm `9.6.3` or higher installed. Install dependencies with:
+- **[PolarisGCS](https://github.com/PolarisGCS)** — a cloud ground control
+  system for coordinating fleets of up to 150 drones, with live WebSocket
+  telemetry and a React/TypeScript operator dashboard.
+- **Guardian Bot** — a ROS-based assistive robot for elderly care, combining
+  autonomous person-following, wearable IoT health monitoring, and automated
+  emergency response.
+- **[PawGuard](https://github.com/ChauhanKrish4763/Pawguard)** — a Flutter +
+  Firebase mobile app connecting users with animal shelters, vets, and rescue
+  teams, with real-time location tracking and secure donations.
+
+## Tech stack
+
+Built with [Remix](https://remix.run/), [Three.js](https://threejs.org/), and
+[Framer Motion](https://www.framer.com/motion/), hosted on Cloudflare Pages.
+The contact form runs on [Web3Forms](https://web3forms.com) — no backend
+required.
+
+## Running locally
+
+Requires Node.js `19.9.0`+ and npm `9.6.3`+.
 
 ```bash
-npm install
-```
-
-Once it's done start up a local server with:
-
-```bash
-npm run dev
+npm install     # install dependencies
+npm run dev     # start the local dev server
 ```
 
 To view the components storybook:
@@ -31,22 +48,14 @@ npm run dev:storybook
 
 ## Deployment
 
-The site is hosted on Cloudflare Pages, connected to this repo for automatic builds on push. To deploy manually instead:
+Hosted on Cloudflare Pages, connected to this repo for automatic builds on
+push to `master`. To deploy manually:
 
 ```bash
 npm run deploy
 ```
 
-## FAQs
+## Credits
 
-<details>
-  <summary>How do I change the color on the <code>DisplacementSphere</code> (blobby rotating thing in the background).</summary>
-  
-  You'll need to edit the fragment shader. [Check out this issue for more details](https://github.com/HamishMW/portfolio/issues/19#issuecomment-870996615).
-</details>
-
-<details>
-  <summary>How do I get the contact form to work?</summary>
-  
-  To get the contact form working create an AWS account and set up SES (Simple Email service). Then plug in your details into `.dev.vars.example` and rename it to `.dev.vars`. You'll also need to add these as environment variables in the Cloudflare dashboard for it to work in production. Or if you don't mind sending through gmail use [nodemailer](https://nodemailer.com/) instead.
-</details>
+Based on the open-source [portfolio template](https://github.com/HamishMW/portfolio)
+by Hamish Williams, restyled and rebuilt around my own projects and content.
