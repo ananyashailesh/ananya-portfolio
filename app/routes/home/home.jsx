@@ -1,15 +1,6 @@
-import gamestackTexture2Large from '~/assets/gamestack-list-large.jpg';
-import gamestackTexture2Placeholder from '~/assets/gamestack-list-placeholder.jpg';
-import gamestackTexture2 from '~/assets/gamestack-list.jpg';
-import gamestackTextureLarge from '~/assets/gamestack-login-large.jpg';
-import gamestackTexturePlaceholder from '~/assets/gamestack-login-placeholder.jpg';
-import gamestackTexture from '~/assets/gamestack-login.jpg';
-import sliceTextureLarge from '~/assets/slice-app-large.jpg';
-import sliceTexturePlaceholder from '~/assets/slice-app-placeholder.jpg';
-import sliceTexture from '~/assets/slice-app.jpg';
-import sprTextureLarge from '~/assets/spr-lesson-builder-dark-large.jpg';
-import sprTexturePlaceholder from '~/assets/spr-lesson-builder-dark-placeholder.jpg';
-import sprTexture from '~/assets/spr-lesson-builder-dark.jpg';
+import dronesGif from '~/assets/drones.gif';
+import pawGif from '~/assets/paw.gif';
+import grannybotGif from '~/assets/grannybot.gif';
 import { Footer } from '~/components/footer';
 import { baseMeta } from '~/utils/meta';
 import { Intro } from './intro';
@@ -18,26 +9,6 @@ import { ProjectSummary } from './project-summary';
 import { useEffect, useRef, useState } from 'react';
 import config from '~/config.json';
 import styles from './home.module.css';
-
-// Prefetch draco decoader wasm
-export const links = () => {
-  return [
-    {
-      rel: 'prefetch',
-      href: '/draco/draco_wasm_wrapper.js',
-      as: 'script',
-      type: 'text/javascript',
-      importance: 'low',
-    },
-    {
-      rel: 'prefetch',
-      href: '/draco/draco_decoder.wasm',
-      as: 'fetch',
-      type: 'application/wasm',
-      importance: 'low',
-    },
-  ];
-};
 
 export const meta = () => {
   return baseMeta({
@@ -107,15 +78,9 @@ export const Home = () => {
         description="Building a cloud ground control system for fleets of up to 150 drones with live telemetry"
         buttonText="View project"
         buttonLink="/projects/polaris-gcs"
-        model={{
-          type: 'laptop',
-          alt: 'PolarisGCS operator dashboard',
-          textures: [
-            {
-              srcSet: `${sprTexture} 1280w, ${sprTextureLarge} 2560w`,
-              placeholder: sprTexturePlaceholder,
-            },
-          ],
+        gif={{
+          src: dronesGif,
+          alt: 'PolarisGCS drone fleet in operation',
         }}
       />
       <ProjectSummary
@@ -128,19 +93,9 @@ export const Home = () => {
         description="A Flutter app connecting users with shelters, vets, and rescue teams in real time"
         buttonText="View project"
         buttonLink="/projects/pawguard"
-        model={{
-          type: 'phone',
-          alt: 'PawGuard app screens',
-          textures: [
-            {
-              srcSet: `${gamestackTexture} 375w, ${gamestackTextureLarge} 750w`,
-              placeholder: gamestackTexturePlaceholder,
-            },
-            {
-              srcSet: `${gamestackTexture2} 375w, ${gamestackTexture2Large} 750w`,
-              placeholder: gamestackTexture2Placeholder,
-            },
-          ],
+        gif={{
+          src: pawGif,
+          alt: 'PawGuard app in use',
         }}
       />
       <ProjectSummary
@@ -152,15 +107,9 @@ export const Home = () => {
         description="An assistive robot for elderly care with person-following, health monitoring, and fall detection"
         buttonText="View project"
         buttonLink="/projects/guardian-bot"
-        model={{
-          type: 'laptop',
-          alt: 'Guardian Bot tracking simulation',
-          textures: [
-            {
-              srcSet: `${sliceTexture} 800w, ${sliceTextureLarge} 1920w`,
-              placeholder: sliceTexturePlaceholder,
-            },
-          ],
+        gif={{
+          src: grannybotGif,
+          alt: 'Guardian Bot following and monitoring its owner',
         }}
       />
       <Profile

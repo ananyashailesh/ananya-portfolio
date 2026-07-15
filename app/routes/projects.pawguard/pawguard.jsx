@@ -1,4 +1,3 @@
-import pawGif from '~/assets/paw.gif';
 import { Footer } from '~/components/footer';
 import {
   ProjectContainer,
@@ -11,7 +10,6 @@ import {
 } from '~/layouts/project';
 import { Fragment } from 'react';
 import { baseMeta } from '~/utils/meta';
-import styles from './pawguard.module.css';
 
 const title = 'PawGuard';
 const description =
@@ -33,11 +31,6 @@ export const PawGuard = () => {
           url="https://github.com/ChauhanKrish4763/Pawguard"
           roles={roles}
         />
-        <ProjectSection>
-          <ProjectSectionContent>
-            <img className={styles.gif} src={pawGif} alt="PawGuard app in use" />
-          </ProjectSectionContent>
-        </ProjectSection>
         <ProjectSection>
           <ProjectSectionContent>
             <ProjectTextRow>

@@ -148,44 +148,21 @@
   }
 }
 
-.svg {
+.gif {
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  border-radius: 8px;
   opacity: 0;
-  transition: opacity 1200ms ease 1400ms;
-  fill: var(--textTitle);
+  transform: translate3d(0, var(--spaceXL), 0);
+  transition-property: opacity, transform;
+  transition-timing-function: var(--bezierFastoutSlowin);
+  transition-duration: var(--durationXL);
+  transition-delay: var(--durationM);
 
   &[data-visible='true'] {
-    opacity: var(--opacity);
-  }
-
-  &[data-device='laptop'] {
-    position: absolute;
-    width: 100%;
-    right: -36%;
-    bottom: 24%;
-    transform: translateY(50%);
-
-    @media (--mediaTablet) {
-      width: 80%;
-      right: -10%;
-      bottom: 18%;
-    }
-
-    @media (--mediaMobile) {
-      right: 0;
-    }
-  }
-
-  &[data-device='phone'] {
-    position: absolute;
-    bottom: 23%;
-    transform: translateY(50%);
-    width: 100%;
-    transition-delay: 800ms;
-
-    @media (--mediaTablet) {
-      width: 80%;
-      bottom: 23%;
-    }
+    opacity: 1;
+    transform: none;
   }
 }
 
