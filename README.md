@@ -1,16 +1,11 @@
-<p align="center">
-  <img src="/public/favicon.svg" width="50" alt="Logo" />
-</p>
 <h1 align="center">Ananya Shailesh — Portfolio</h1>
-
-[![Site preview](/public/site-preview.png)](https://ananyashailesh.dev)
 
 My personal portfolio site. I'm a Computer Science student specializing in
 AI and Robotics at VIT Chennai, currently interning on the Excalibur team at
 Dell Technologies, where I build AI-driven tools, robotics systems, and
 full-stack applications.
 
-**Live site:** [ananyashailesh.dev](https://ananyashailesh.dev)
+**Live site:** [portfolio-63m.pages.dev](https://portfolio-63m.pages.dev)
 
 ## Featured projects
 
