@@ -1,3 +1,4 @@
+import grannybotGif from '~/assets/grannybot.gif';
 import { Footer } from '~/components/footer';
 import {
   ProjectContainer,
@@ -10,6 +11,7 @@ import {
 } from '~/layouts/project';
 import { Fragment } from 'react';
 import { baseMeta } from '~/utils/meta';
+import styles from './guardian-bot.module.css';
 
 const title = 'Guardian Bot';
 const description =
@@ -29,6 +31,11 @@ export const GuardianBot = () => {
           description={description}
           roles={roles}
         />
+        <ProjectSection>
+          <ProjectSectionContent>
+            <img className={styles.gif} src={grannybotGif} alt="Guardian Bot following and monitoring its owner" />
+          </ProjectSectionContent>
+        </ProjectSection>
         <ProjectSection>
           <ProjectSectionContent>
             <ProjectTextRow>

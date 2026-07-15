@@ -1,3 +1,4 @@
+import dronesGif from '~/assets/drones.gif';
 import { Footer } from '~/components/footer';
 import {
   ProjectContainer,
@@ -10,6 +11,7 @@ import {
 } from '~/layouts/project';
 import { Fragment } from 'react';
 import { baseMeta } from '~/utils/meta';
+import styles from './polaris-gcs.module.css';
 
 const title = 'Multi-Drone Ground Control System';
 const description =
@@ -31,6 +33,11 @@ export const PolarisGcs = () => {
           url="https://github.com/PolarisGCS"
           roles={roles}
         />
+        <ProjectSection>
+          <ProjectSectionContent>
+            <img className={styles.gif} src={dronesGif} alt="PolarisGCS drone fleet in operation" />
+          </ProjectSectionContent>
+        </ProjectSection>
         <ProjectSection>
           <ProjectSectionContent>
             <ProjectTextRow>
