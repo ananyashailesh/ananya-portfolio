@@ -28,7 +28,7 @@ export const PolarisGcs = () => {
           title={title}
           description={description}
           linkLabel="View on GitHub"
-          url="https://github.com/ananyashailesh"
+          url="https://github.com/PolarisGCS"
           roles={roles}
         />
         <ProjectSection>

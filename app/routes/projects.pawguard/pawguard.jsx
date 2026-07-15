@@ -1,4 +1,6 @@
 import { Footer } from '~/components/footer';
+import { Loader } from '~/components/loader';
+import { standaloneModels } from '~/components/model/device-models';
 import {
   ProjectContainer,
   ProjectHeader,
@@ -8,8 +10,13 @@ import {
   ProjectSectionText,
   ProjectTextRow,
 } from '~/layouts/project';
-import { Fragment } from 'react';
+import { Fragment, Suspense, lazy, useState } from 'react';
 import { baseMeta } from '~/utils/meta';
+import styles from './pawguard.module.css';
+
+const Model = lazy(() =>
+  import('~/components/model').then(module => ({ default: module.Model }))
+);
 
 const title = 'PawGuard';
 const description =
@@ -21,6 +28,8 @@ export const meta = () => {
 };
 
 export const PawGuard = () => {
+  const [modelLoaded, setModelLoaded] = useState(false);
+
   return (
     <Fragment>
       <ProjectContainer>
@@ -28,7 +37,7 @@ export const PawGuard = () => {
           title={title}
           description={description}
           linkLabel="View on GitHub"
-          url="https://github.com/ananyashailesh"
+          url="https://github.com/ChauhanKrish4763/Pawguard"
           roles={roles}
         />
         <ProjectSection>
@@ -43,6 +52,23 @@ export const PawGuard = () => {
                 them, in one app.
               </ProjectSectionText>
             </ProjectTextRow>
+          </ProjectSectionContent>
+        </ProjectSection>
+        <ProjectSection>
+          <ProjectSectionContent>
+            <div className={styles.modelContainer}>
+              {!modelLoaded && <Loader center className={styles.modelLoader} />}
+              <Suspense>
+                <Model
+                  alt="3D model of a Canaan Dog, the kind of animal PawGuard helps rescue"
+                  cameraPosition={{ x: 0, y: 0, z: 8 }}
+                  showDelay={300}
+                  onLoad={() => setModelLoaded(true)}
+                  show
+                  models={[standaloneModels.canaanDog]}
+                />
+              </Suspense>
+            </div>
           </ProjectSectionContent>
         </ProjectSection>
         <ProjectSection light>

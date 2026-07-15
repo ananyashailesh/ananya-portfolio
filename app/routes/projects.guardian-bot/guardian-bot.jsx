@@ -27,8 +27,6 @@ export const GuardianBot = () => {
         <ProjectHeader
           title={title}
           description={description}
-          linkLabel="View on GitHub"
-          url="https://github.com/ananyashailesh"
           roles={roles}
         />
         <ProjectSection>

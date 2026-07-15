@@ -385,23 +385,23 @@ const Device = ({
 
     // Generate promises to await when ready
     const load = async () => {
-      const { texture, position, url } = model;
+      const { texture, position, url, tintMaterial = true } = model;
       let loadFullResTexture;
       let playAnimation;
 
       const [placeholder, gltf] = await Promise.all([
-        await textureLoader.loadAsync(texture.placeholder),
-        await modelLoader.loadAsync(url),
+        texture ? textureLoader.loadAsync(texture.placeholder) : Promise.resolve(),
+        modelLoader.loadAsync(url),
       ]);
 
       modelGroup.current.add(gltf.scene);
 
       gltf.scene.traverse(async node => {
-        if (node.material) {
+        if (node.material && tintMaterial) {
           node.material.color = new Color(0x1f2025);
         }
 
-        if (node.name === MeshType.Screen) {
+        if (texture && node.name === MeshType.Screen) {
           // Create a copy of the screen mesh so we can fade it out
           // over the full resolution screen texture
           placeholderScreen.current = node.clone();
@@ -506,10 +506,10 @@ const Device = ({
       onLoad?.();
 
       if (!reduceMotion) {
-        animation = playAnimation();
+        animation = playAnimation?.();
       }
 
-      await loadFullResTexture();
+      await loadFullResTexture?.();
 
       if (reduceMotion) {
         renderFrame();
