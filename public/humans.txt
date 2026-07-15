@@ -1,0 +1,29 @@
+The humans.txt file explains the team, technology,
+and graphic assets behind this site humanstxt.org.
+
+_______________________________________________________________________________
+
+DEVELOPER
+
+Ananya Shailesh
+Software engineer building AI, robotics, and full-stack projects
+
+github.com/ananyashailesh
+linkedin.com/in/ananya-shailesh-1376a5293
+
+_______________________________________________________________________________
+
+TECHNOLOGY
+
+React
+Remix
+Three.js
+Framer Motion
+
+_______________________________________________________________________________
+
+FONTS
+
+Gotham
+IPA Gothic Regular
+Hiragino Kaku Gothic W8

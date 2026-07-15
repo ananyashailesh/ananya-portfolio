@@ -1,0 +1,26 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://ananyashailesh.dev/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://ananyashailesh.dev/contact/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://ananyashailesh.dev/uses/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://ananyashailesh.dev/projects/polaris-gcs/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://ananyashailesh.dev/projects/guardian-bot/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://ananyashailesh.dev/projects/pawguard/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+</urlset>
