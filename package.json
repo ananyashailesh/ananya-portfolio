@@ -2,7 +2,7 @@
   "name": "portfolio",
   "homepage": "https://portfolio-63m.pages.dev",
   "description": "Portfolio site for Ananya Shailesh",
-  "repository": "https://github.com/ananyashailesh/portfolio.git",
+  "repository": "https://github.com/ananyashailesh/ananya-portfolio.git",
   "author": "Ananya Shailesh",
   "sideEffects": false,
   "type": "module",
